@@ -2,7 +2,7 @@
 
 if [ -d "./target/" ]
 then
-	rm -r target/
+	rm -rf target/
 fi
 docker build -t build-jar-inside-docker-image .
 docker create -it --name build-jar-inside-docker build-jar-inside-docker-image bash
